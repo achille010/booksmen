@@ -87,7 +87,7 @@ Contributions are welcome! Feel free to fork this repository and submit pull req
 
 ## License
 
-MIT License - feel free to use this project for learning or as a foundation for more complex applications.
+MIT License - Read details from the LICENSE file
 
 ---
 
