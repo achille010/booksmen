@@ -29,6 +29,7 @@ if (isset($_GET['borrow']) && isset($_GET['book_id']) && isset($_GET['member_id'
 <html>
 <head>
     <title>Little libraryBooksmen app</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body { font-family: Arial; margin: 40px; }
         table { border-collapse: collapse; margin-bottom: 40px; }
