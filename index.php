@@ -1,11 +1,11 @@
 <?php
-$members = [
+$libraryMembers = [
     ['id' => 1, 'name' => 'Alice Johnson'],
     ['id' => 2, 'name' => 'Bob Smith'],
     ['id' => 3, 'name' => 'Claire Mbonyinshuti']
 ];
 
-$books = [
+$libraryBooks = [
     ['id' => 1, 'title' => 'Harry Potter and the Sorcerer\'s Stone', 'borrowed_by' => 1],
     ['id' => 2, 'title' => 'The Hobbit', 'borrowed_by' => null],
     ['id' => 3, 'title' => 'Clean Code', 'borrowed_by' => 2],
@@ -16,7 +16,7 @@ if (isset($_GET['borrow']) && isset($_GET['book_id']) && isset($_GET['member_id'
     $bookId = (int)$_GET['book_id'];
     $memberId = (int)$_GET['member_id'];
 
-    foreach ($books as &$book) {
+    foreach ($libraryBooks as &$book) {
         if ($book['id'] === $bookId && $book['borrowed_by'] === null) {
             $book['borrowed_by'] = $memberId;
         }
@@ -28,7 +28,7 @@ if (isset($_GET['borrow']) && isset($_GET['book_id']) && isset($_GET['member_id'
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Little Booksmen app</title>
+    <title>Little libraryBooksmen app</title>
     <style>
         body { font-family: Arial; margin: 40px; }
         table { border-collapse: collapse; margin-bottom: 40px; }
@@ -41,10 +41,10 @@ if (isset($_GET['borrow']) && isset($_GET['book_id']) && isset($_GET['member_id'
 <body>
 <h1>Mini Library Catalog</h1>
 
-<h2>Books</h2>
+<h2>libraryBooks</h2>
 <table>
 <tr><th>Title</th><th>Status</th><th>Action</th></tr>
-<?php foreach ($books as $book): ?>
+<?php foreach ($libraryBooks as $book): ?>
 <tr>
     <td><?= htmlspecialchars($book['title']) ?></td>
     <td>
@@ -53,7 +53,7 @@ if (isset($_GET['borrow']) && isset($_GET['book_id']) && isset($_GET['member_id'
             echo "Available";
         } else {
             $memberName = '';
-            foreach ($members as $m) {
+            foreach ($libraryMembers as $m) {
                 if ($m['id'] === $book['borrowed_by']) $memberName = $m['name'];
             }
             echo "Borrowed by $memberName";
@@ -73,7 +73,7 @@ if (isset($_GET['borrow']) && isset($_GET['book_id']) && isset($_GET['member_id'
 
 <h2>Members</h2>
 <ul>
-<?php foreach ($members as $m): ?>
+<?php foreach ($libraryMembers as $m): ?>
     <li><?= htmlspecialchars($m['name']) ?></li>
 <?php endforeach; ?>
 </ul>
