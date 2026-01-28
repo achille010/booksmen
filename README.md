@@ -83,7 +83,7 @@ This is intentionally minimal to showcase basic PHP web development patterns.
 
 ## Contributing
 
-Contributions are welcome! Feel free to fork this repository and submit pull requests for improvements.
+Contributions are welcome! Feel free to fork this repository and submit pull requests for improvements. If you find this repo helpful, leave a ⭐.
 
 ## License
 
