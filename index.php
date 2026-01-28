@@ -9,7 +9,8 @@ $libraryBooks = [
     ['id' => 1, 'title' => 'Harry Potter and the Sorcerer\'s Stone', 'borrowed_by' => 1],
     ['id' => 2, 'title' => 'The Hobbit', 'borrowed_by' => null],
     ['id' => 3, 'title' => 'Clean Code', 'borrowed_by' => 2],
-    ['id' => 4, 'title' => 'The Alchemist', 'borrowed_by' => null]
+    ['id' => 4, 'title' => 'The Alchemist', 'borrowed_by' => null],
+    ['id' => 5, 'title' => 'How to Kill a Mockingbird', 'borrowed_by' => 1]
 ];
 
 if (isset($_GET['borrow']) && isset($_GET['book_id']) && isset($_GET['member_id'])) {
